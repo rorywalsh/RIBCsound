@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="57px" viewBox="0 0 128 57" enable-background="new 0 0 128 57" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="57"/>
+</g>
+<rect fill="#627278" width="5" height="57"/>
+<g>
+	<path fill="#698A97" d="M37,25v23H14V25H37 M38,24H13v25h25V24L38,24z"/>
+</g>
+<g>
+	<path fill="#698A97" d="M68,25v23H45V25H68 M69,24H44v25h25V24L69,24z"/>
+</g>
+<g>
+	<path fill="#698A97" d="M99,25v23H76V25H99 M100,24H75v25h25V24L100,24z"/>
+</g>
+<polyline fill="none" stroke="#698A97" stroke-miterlimit="10" points="116,48.5 105.5,48.5 105.5,24.5 116,24.5 "/>
+<text transform="matrix(1 0 0 1 13 15.5693)" font-family="'OpenSans-Semibold'" font-size="10" id="tizen_horizontal_box_title">Horizontal Box Layout</text>
+</svg>

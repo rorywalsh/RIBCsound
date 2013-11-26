@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="59px" viewBox="0 0 128 59" enable-background="new 0 0 128 59" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="59"/>
+</g>
+<rect fill="#627278" width="5" height="59"/>
+<path fill="#698A97" stroke="#435961" stroke-miterlimit="10" d="M56.5,18.766c0-6.074-3.705-10.266-9.897-10.266H24.026
+	C17.834,8.5,12.5,12.691,12.5,18.766v19c0,6.075,5.334,11.734,11.526,11.734h22.576c6.192,0,9.897-5.659,9.897-11.734V18.766z"/>
+<text transform="matrix(1 0 0 1 70 21.4263)"><tspan x="0" y="0" font-family="'OpenSans-Semibold'" font-size="11" id="tizen_vertical_toggle_switch_title_line_one">Vertical</tspan><tspan x="0" y="13" font-family="'OpenSans-Semibold'" font-size="11" id="tizen_vertical_toggle_switch_title_line_two">Toggle</tspan><tspan x="0" y="26" font-family="'OpenSans-Semibold'" font-size="11" id="tizen_vertical_toggle_switch_title_line_three">Switch</tspan></text>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="69.4688" y1="17.1997" x2="69.4688" y2="-2.6094" gradientTransform="matrix(1 0 0 1 -35 12.0005)">
+	<stop  offset="0" style="stop-color:#DDDDDD"/>
+	<stop  offset="1" style="stop-color:#FDFDFD"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" d="M13,29c0,0-0.062-4.478-0.062-10S17.977,9,23.5,9h23C53,9,56,13.478,56,19s-0.062,10-0.062,10H13z"/>
+<text transform="matrix(1 0 0 1 28 41.5703)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="10" id="tizen_vertical_toggle_switch_button_text">On</text>
+</svg>

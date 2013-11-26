@@ -1,0 +1,4 @@
+*.swp
+jslint-report.html
+patches/
+*.crx

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="53px" viewBox="0 0 128 53" enable-background="new 0 0 128 53" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="53"/>
+</g>
+<rect fill="#627278" width="5" height="53"/>
+<text transform="matrix(1 0 0 1 12.3623 14.5859)" font-family="'OpenSans-Semibold'" font-size="9" id="jqm_horizontal_button_group_title">Horizontal Button Group</text>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="66.5" y1="45.21" x2="66.5" y2="24.4109">
+		<stop  offset="0" style="stop-color:#DDDDDD"/>
+		<stop  offset="1" style="stop-color:#FDFDFD"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M20.062,45C15.893,45,12,41.136,12,37v-6c0-4.136,3.893-7,8.062-7h93.875
+		c4.17,0,7.062,2.864,7.062,7v6c0,4.136-2.893,8-7.062,8H20.062z"/>
+	<path fill="#999999" d="M113.969,24c3.895,0,7.031,3.141,7.031,7v6c0,3.859-3.168,7-7.062,7H20.062C16.168,44,13,40.859,13,37v-6
+		c0-3.859,3.168-7,7.062-7H114 M113.938,23H20.062C15.609,23,12,26.582,12,31v6c0,4.418,3.609,8,8.062,8h93.875
+		c4.453,0,8.062-3.582,8.062-8v-6C122,26.582,118.391,23,113.938,23L113.938,23z"/>
+</g>
+<line fill="none" stroke="#999999" stroke-miterlimit="10" x1="86.5" y1="23" x2="86.5" y2="45"/>
+<line fill="none" stroke="#999999" stroke-miterlimit="10" x1="49.5" y1="23" x2="49.5" y2="44"/>
+</svg>

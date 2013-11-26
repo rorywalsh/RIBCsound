@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="77px" viewBox="0 0 128 77" enable-background="new 0 0 128 77" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="77"/>
+</g>
+<rect fill="#627278" width="5" height="77"/>
+<text transform="matrix(1 0 0 1 11 15.1914)" font-family="'OpenSans-Semibold'" font-size="11" id="tizen_expandable_list_item_title">Expandable List Item</text>
+<g>
+	<path fill="#D2D4D6" d="M114,46h-3v1h3V46L114,46z M108,46h-3v1h3V46L108,46z M102,46h-3v1h3V46L102,46z M96,46h-3v1h3V46L96,46z
+		 M90,46h-3v1h3V46L90,46z M84,46h-3v1h3V46L84,46z M78,46h-3v1h3V46L78,46z M72,46h-3v1h3V46L72,46z M66,46h-3v1h3V46L66,46z
+		 M60,46h-3v1h3V46L60,46z M54,46h-3v1h3V46L54,46z M48,46h-3v1h3V46L48,46z M42,46h-3v1h3V46L42,46z M36,46h-3v1h3V46L36,46z
+		 M30,46h-3v1h3V46L30,46z M24,46h-3v1h3V46L24,46z M18,46h-3v1h3V46L18,46z M13,46h-1v3h1V46L13,46z M13,52h-1v3h1V52L13,52z
+		 M13,58h-1v3h1V58L13,58z M14.5,64h-2l0,0l0,0l0,0l0,0l0,0v1h1l0,0l0,0l0,0l0,0c0.5,0,1,0,1,0V64L14.5,64z M20,64h-3v1h3V64L20,64z
+		 M26,64h-3v1h3V64L26,64z M32,64h-3v1h3V64L32,64z M38,64h-3v1h3V64L38,64z M44,64h-3v1h3V64L44,64z M50,64h-3v1h3V64L50,64z
+		 M56,64h-3v1h3V64L56,64z M62,64h-3v1h3V64L62,64z M68,64h-3v1h3V64L68,64z M74,64h-3v1h3V64L74,64z M80,64h-3v1h3V64L80,64z
+		 M86,64h-3v1h3V64L86,64z M92,64h-3v1h3V64L92,64z M98,64h-3v1h3V64L98,64z M104,64h-3v1h3V64L104,64z M110,64h-3v1h3V64L110,64z
+		 M116,64h-3v1h3V64L116,64z M120.5,63h-1v1l0,0v1h1V63L120.5,63z M120,57h-1v3h1V57L120,57z M120,51h-1v3h1V51L120,51z M120,46h-3
+		v1h2v1h1V46L120,46z"/>
+</g>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="65.5" y1="47.21" x2="65.5" y2="26.4109">
+		<stop  offset="0" style="stop-color:#DDDDDD"/>
+		<stop  offset="1" style="stop-color:#FDFDFD"/>
+	</linearGradient>
+	<rect x="12" y="26" fill="url(#SVGID_1_)" width="107" height="21"/>
+	<path fill="#999999" d="M119,26v20H13V26H119 M120,25H12v22h108V25L120,25z"/>
+</g>
+<circle fill="#BCBEC0" cx="107" cy="36" r="7"/>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="110,34.188 106.852,37.335 103.516,34 "/>
+</svg>

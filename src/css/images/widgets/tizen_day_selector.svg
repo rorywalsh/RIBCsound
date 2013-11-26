@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="45px" viewBox="0 0 128 45" enable-background="new 0 0 128 45" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="45"/>
+</g>
+<text transform="matrix(1 0 0 1 13 16.4263)" font-family="'OpenSans-Semibold'" font-size="11" id="tizen_day_selector_title">Day Picker</text>
+<rect fill="#627278" width="5" height="45"/>
+<g>
+	<rect x="12" y="24" fill="#AAB4B8" width="14" height="14"/>
+</g>
+<g>
+	<rect x="28" y="24" fill="#AAB4B8" width="14" height="14"/>
+</g>
+<g>
+	<rect x="44" y="24" fill="#AAB4B8" width="14" height="14"/>
+</g>
+<g>
+	<rect x="60" y="24" fill="#AAB4B8" width="14" height="14"/>
+</g>
+<g>
+	<rect x="76" y="24" fill="#AAB4B8" width="14" height="14"/>
+</g>
+<g>
+	<rect x="92" y="24" fill="#AAB4B8" width="14" height="14"/>
+</g>
+<g>
+	<rect x="108" y="24" fill="#AAB4B8" width="14" height="14"/>
+</g>
+<text transform="matrix(1 0 0 1 16 34.9258)" fill="#F1F2F2" font-family="'OpenSans'" font-size="11" id="tizen_day_selector_day_one_text">S</text>
+<text transform="matrix(1 0 0 1 112.3223 34.9258)" fill="#F1F2F2" font-family="'OpenSans'" font-size="11" id="tizen_day_selector_day_two_text">S</text>
+<text transform="matrix(1 0 0 1 30 34.9258)" fill="#F1F2F2" font-family="'OpenSans'" font-size="11" id="tizen_day_selector_day_three_text">M</text>
+<text transform="matrix(1 0 0 1 48 35.3564)" fill="#F1F2F2" font-family="'OpenSans'" font-size="11" id="tizen_day_selector_day_four_text">T</text>
+<text transform="matrix(1 0 0 1 62 34.9258)" fill="#F1F2F2" font-family="'OpenSans'" font-size="11" id="tizen_day_selector_day_five_text">W</text>
+<text transform="matrix(1 0 0 1 80 35.002)" fill="#F1F2F2" font-family="'OpenSans'" font-size="11" id="tizen_day_selector_day_six_text">T</text>
+<text transform="matrix(1 0 0 1 96.3223 34.9258)" fill="#F1F2F2" font-family="'OpenSans'" font-size="11" id="tizen_day_selector_day_seven_text">F</text>
+</svg>

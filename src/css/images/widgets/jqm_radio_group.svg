@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="92px" viewBox="0 0 128 92" enable-background="new 0 0 128 92" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="92"/>
+</g>
+<rect fill="#627278" width="5" height="92"/>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="65.5" y1="45.1899" x2="65.5" y2="26.3713">
+		<stop  offset="0" style="stop-color:#DDDDDD"/>
+		<stop  offset="1" style="stop-color:#FDFDFD"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M12,45V33c0-4.136,3.327-7,6.803-7h94.395c3.476,0,5.803,2.864,5.803,7v12H12z"/>
+	<path fill="#A7A9AC" d="M113.099,26c3.199,0,5.901,3.14,5.901,7v11H13V33c0-3.86,2.603-7,5.803-7H113 M113.197,25H18.803
+		C15.046,25,12,28.582,12,33v12h108V33C120,28.582,116.955,25,113.197,25L113.197,25z"/>
+</g>
+<text transform="matrix(0.9971 0 0 1 12.0005 16.1602)" font-family="'OpenSans-Semibold'" font-size="11" id="jqm_radio_group_title">Radio Group</text>
+<g>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="65.5" y1="83.1904" x2="65.5" y2="64.3718">
+		<stop  offset="0" style="stop-color:#DDDDDD"/>
+		<stop  offset="1" style="stop-color:#FDFDFD"/>
+	</linearGradient>
+	<path fill="url(#SVGID_2_)" d="M18.803,83C15.327,83,12,79.136,12,75V64h107v11c0,4.136-2.327,8-5.803,8H18.803z"/>
+	<path fill="#A7A9AC" d="M119,64v11c0,3.859-2.604,7-5.803,7H18.803C15.603,82,13,78.859,13,75V64H119 M120,63H12v12
+		c0,4.418,3.045,8,6.803,8h94.395c3.756,0,6.803-3.582,6.803-8V63L120,63z"/>
+</g>
+<g>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="65.5" y1="64.1904" x2="65.5" y2="45.3723">
+		<stop  offset="0" style="stop-color:#DDDDDD"/>
+		<stop  offset="1" style="stop-color:#FDFDFD"/>
+	</linearGradient>
+	<rect x="12" y="45" fill="url(#SVGID_3_)" width="107" height="19"/>
+	<path fill="#A7A9AC" d="M119,45v18H13V45H119 M120,44H12v20h108V44L120,44z"/>
+</g>
+<g>
+	<radialGradient id="SVGID_4_" cx="27.5" cy="35.5" r="5" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.6641" style="stop-color:#FDFDFD"/>
+		<stop  offset="1" style="stop-color:#DDDDDD"/>
+	</radialGradient>
+	<path fill="url(#SVGID_4_)" d="M27.5,40.5c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S30.257,40.5,27.5,40.5z"/>
+	<path fill="#B7B8BD" d="M27.5,31c2.481,0,4.5,2.019,4.5,4.5S29.981,40,27.5,40S23,37.981,23,35.5S25.019,31,27.5,31 M27.5,30
+		c-3.038,0-5.5,2.463-5.5,5.5s2.462,5.5,5.5,5.5s5.5-2.463,5.5-5.5S30.538,30,27.5,30L27.5,30z"/>
+</g>
+<g>
+	<radialGradient id="SVGID_5_" cx="27.5" cy="54.5" r="5" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.6641" style="stop-color:#FDFDFD"/>
+		<stop  offset="1" style="stop-color:#DDDDDD"/>
+	</radialGradient>
+	<path fill="url(#SVGID_5_)" d="M27.5,59.5c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S30.257,59.5,27.5,59.5z"/>
+	<path fill="#B7B8BD" d="M27.5,50c2.481,0,4.5,2.019,4.5,4.5S29.981,59,27.5,59S23,56.981,23,54.5S25.019,50,27.5,50 M27.5,49
+		c-3.038,0-5.5,2.463-5.5,5.5s2.462,5.5,5.5,5.5s5.5-2.463,5.5-5.5S30.538,49,27.5,49L27.5,49z"/>
+</g>
+<circle fill="#698A97" cx="27.5" cy="54.417" r="3.208"/>
+<g>
+	<radialGradient id="SVGID_6_" cx="27.5" cy="73.5" r="5" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.6641" style="stop-color:#FDFDFD"/>
+		<stop  offset="1" style="stop-color:#DDDDDD"/>
+	</radialGradient>
+	<path fill="url(#SVGID_6_)" d="M27.5,78.5c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S30.257,78.5,27.5,78.5z"/>
+	<path fill="#B7B8BD" d="M27.5,69c2.481,0,4.5,2.019,4.5,4.5S29.981,78,27.5,78S23,75.981,23,73.5S25.019,69,27.5,69 M27.5,68
+		c-3.038,0-5.5,2.463-5.5,5.5s2.462,5.5,5.5,5.5s5.5-2.463,5.5-5.5S30.538,68,27.5,68L27.5,68z"/>
+</g>
+<text transform="matrix(1 0 0 1 38 37.8555)" fill="#939598" font-family="'OpenSans-Semibold'" font-size="8" id="jqm_radio_group_option_one_text">Option One</text>
+<text transform="matrix(1 0 0 1 38 56.8555)" fill="#939598" font-family="'OpenSans-Semibold'" font-size="8" id="jqm_radio_group_option_two_text">Option Two</text>
+<text transform="matrix(1 0 0 1 38 75.8555)" fill="#939598" font-family="'OpenSans-Semibold'" font-size="8" id="jqm_radio_group_option_three_text">Option Three</text>
+</svg>

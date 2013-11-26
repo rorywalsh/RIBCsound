@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="31px" viewBox="0 0 128 31" enable-background="new 0 0 128 31" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="31"/>
+</g>
+<rect fill="#627278" width="5" height="31"/>
+<text transform="matrix(1 0 0 1 36 19.4258)" font-family="'OpenSans-Semibold'" font-size="11" id="jqm_radio_button_title">Radio Button</text>
+<g>
+	<radialGradient id="SVGID_1_" cx="20.5" cy="15.5" r="7" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.6641" style="stop-color:#FDFDFD"/>
+		<stop  offset="1" style="stop-color:#DDDDDD"/>
+	</radialGradient>
+	<path fill="url(#SVGID_1_)" d="M20.5,22.5c-3.86,0-7-3.141-7-7c0-3.86,3.14-7,7-7s7,3.14,7,7C27.5,19.359,24.36,22.5,20.5,22.5z"/>
+	<path fill="#B7B8BD" d="M20.5,9c3.584,0,6.5,2.916,6.5,6.5S24.084,22,20.5,22S14,19.084,14,15.5S16.916,9,20.5,9 M20.5,8
+		c-4.143,0-7.5,3.358-7.5,7.5s3.357,7.5,7.5,7.5s7.5-3.358,7.5-7.5S24.643,8,20.5,8L20.5,8z"/>
+</g>
+<circle fill="#698A97" cx="20.515" cy="15.547" r="4.374"/>
+</svg>

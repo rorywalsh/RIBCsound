@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="38px" viewBox="0 0 128 38" enable-background="new 0 0 128 38" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="38"/>
+</g>
+<rect fill="#627278" width="5" height="38"/>
+<g>
+	<path fill="#F1F2F2" d="M24.212,30C18.305,30,13.5,25.29,13.5,19.5C13.5,13.71,18.305,9,24.212,9h84.576
+		c5.906,0,10.712,4.71,10.712,10.5c0,5.79-4.806,10.5-10.712,10.5H24.212z"/>
+	<path fill="#BCBEC0" d="M108.895,9c5.631,0,10.158,4.486,10.158,10c0,5.514-4.634,10-10.265,10H24.212C18.581,29,14,24.514,14,19
+		c0-5.514,4.581-10,10.212-10H109 M108.788,8H24.212C18.02,8,13,12.926,13,19c0,6.075,5.02,11,11.212,11h84.576
+		C114.98,30,120,25.075,120,19C120,12.926,114.98,8,108.788,8L108.788,8z"/>
+</g>
+<text transform="matrix(1 0 0 1 23 23.4258)" fill="#536166" font-family="'OpenSans-Semibold'" font-size="11" id="jqm_select_title">Select Menu</text>
+<circle fill="#BCBEC0" cx="107" cy="19" r="8"/>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="110.928,17.104 107.016,21.016 103,17 "/>
+</svg>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="65px" viewBox="0 0 128 65" enable-background="new 0 0 128 65" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="65"/>
+</g>
+<rect fill="#627278" width="5" height="65"/>
+<text transform="matrix(1 0 0 1 13 15.4263)" font-family="'OpenSans-Semibold'" font-size="11" id="jqm_text_area_title">Text Area</text>
+<path fill="none" stroke="#BFBFBF" stroke-miterlimit="10" d="M120.406,58.1"/>
+<g>
+	<path fill="#969696" d="M119,23v32H14V23H119 M120,22H13v34h107V22L120,22z"/>
+</g>
+<g>
+	<path fill="#E8E8E8" d="M118,24v30H15V24H118 M119,23H14v32h105V23L119,23z"/>
+</g>
+<g>
+	<rect x="15" y="24" fill="#FFFFFF" width="104" height="31"/>
+</g>
+</svg>

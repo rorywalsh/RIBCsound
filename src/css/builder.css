@@ -1,0 +1,1561 @@
+/*
+ * Rapid Interface Builder (RIB) - A simple WYSIWYG HTML5 app creator
+ * Copyright (c) 2011-2012, Intel Corporation.
+ *
+ * This program is licensed under the terms and conditions of the
+ * Apache License, version 2.0.  The full text of the Apache License is at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+/*******************************/
+/* DOM Element specific tweaks */
+/*******************************/
+html, body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    padding: 1em;
+}
+
+body.ui-tabs.ui-widget {
+    overflow: hidden;
+    cursor: default;
+    padding: 0px;
+    -webkit-user-select: none;
+    background: -webkit-radial-gradient(50% -15%,
+                                        circle closest-corner,
+                                        #3a6172,
+                                        #43515d);
+    -webkit-box-shadow: .5em .5em 1em -5px rgba(0,0,0,0.8);
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    border: none;
+}
+
+/****************************************/
+/* Mouse coordinate debug helper styles */
+/****************************************/
+#coord {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid black;
+    -webkit-box-shadow: .5em .5em 1em -5px rgba(0,0,0,0.8);
+}
+#coord > div {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+#coord > div:last-child {
+    padding-bottom: 0.25em;
+}
+#coord div.rib-drag-handle {
+    display: block;
+    background-image: -webkit-linear-gradient(top, yellow, red, gray);
+    height: .75em;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid black;
+}
+#coord > div > label {
+    font-weight: bold;
+    color: rgba(255,255,255,0.8);
+}
+#coord > div > span {
+    color: rgba(255,255,255,0.8);
+}
+
+/***************************************************/
+/* Structural styles for UI layout and positioning */
+/***************************************************/
+.hidden-accessible {
+    position: fixed;
+    top: 100%;
+    left: 100%;
+    max-width: 0px;
+    max-height: 0px;
+    margin: 0px;
+    padding: 0px;
+    visibility: hidden;
+    z-index: -99999;
+}
+.compact {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+.exploded {
+    border: 1px dashed;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.fullsize {
+    width: 100%;
+    height: 100%;
+}
+.bar {
+    height: 32px;
+    max-height: 64px;
+}
+.hasflex {
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+}
+.hbox {
+    box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+
+    box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-box-pack: justify;
+
+    box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-box-align: stretch;
+
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+}
+.vbox {
+    box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+
+    box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-box-pack: justify;
+
+    box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-box-align: stretch;
+
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+}
+.flex0 {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+}
+.flex1 {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+}
+.flex2 {
+    -webkit-box-flex: 2;
+    -moz-box-flex: 2;
+    box-flex: 2;
+}
+
+/*
+  Navigation bar styles
+*/
+.navbar {
+    display: -webkit-box;
+    border: 0px none transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+    background: none;
+    background-color: #2a3c4a;
+    height: 56px;
+    -webkit-border-top-left-radius: .4em;
+    -webkit-border-top-right-radius: .4em;
+    -webkit-border-bottom-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+}
+.navbar > * {
+    height: 32px;
+}
+.navbar > ul.ui-tabs-nav {
+    display: -webkit-box;
+    border: 0px none transparent;
+    background: none;
+    padding: 0px;
+    margin: 12px 0px 12px 10px;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+}
+.navbar > ul.ui-tabs-nav li {
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    top: 0px;
+    margin: 0px;
+    border: none;
+    background: none;
+}
+.navbar > ul.ui-tabs-nav li:first-child {
+    -webkit-border-top-left-radius: .5em !important;
+    -webkit-border-bottom-left-radius: .5em !important;
+}
+.navbar > ul.ui-tabs-nav li:last-child {
+    -webkit-border-top-right-radius: .5em !important;
+    -webkit-border-bottom-right-radius: .5em !important;
+}
+.navbar > ul.ui-tabs-nav li.ui-tabs-selected {
+    padding-bottom: 0px;
+}
+.navbar .default-tools a:hover {
+    /* GRG */
+    color: #ccc;
+}
+.navbar .default-tools a:active {
+    /* GRG */
+    color: #999;
+}
+.navbar a:active {
+    /* GRG */
+    color: #999;
+}
+.navbar a {
+    /* FIXME: temporary to make tab buttons more reasonably sized */
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.navbar > ul.ui-tabs-nav li a {
+    padding: 0;
+    height: 32px;
+    border: none;
+}
+
+/*
+  View widget base styles
+*/
+.view { overflow: hidden; }
+.view.ui-tabs-panel { display: -webkit-box; padding: 0px; margin: 0px; }
+.view.ui-tabs-panel.ui-tabs-hide { display: none !important; }
+
+/*
+  Project View widget specific styles
+*/
+.view.project { }
+
+/*
+  Layout View widget specific styles
+*/
+.view.layout { }
+.view.layout .stage div {
+    overflow-y: auto;
+}
+.view.layout iframe {
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+    margin: 25px 50px 25px 50px;
+    background-color: #fff;
+    border: 1px solid #a1a1a1;
+    -webkit-border-radius: 14px;
+    -webkit-box-shadow: 2px 2px 3px #595b55;
+}
+
+/*
+  Code View widget specific styles
+*/
+.view.code { }
+
+/*
+  Live View widget specific styles
+*/
+.view.live { }
+.view.live .stage {
+    background-color: white;
+    background-image: none;
+    background-attachment: fixed;
+    -webkit-box-pack: top;
+    -webkit-box-align: center;
+}
+.view.live .stage .panel-section-contents:last {
+    background: #e4e5df;
+}
+.view.live .stage .panel-section-contents .separated {
+    margin-left: 15px;
+}
+.view.live .stage .panel-section-contents > * {
+    font-size: 11px;
+    font-weight: normal;
+    color: #4d4d4d;
+}
+.view.live .stage > div {
+
+    position: relative;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+.view.live iframe {
+    display: block;
+    overflow: hidden;
+    border: 0px none;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+.view.live iframe.phone {
+    /* device 'screen' dimensions */
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+    height: 480px;
+    min-height: 480px;
+    max-height: 480px;
+    /* device 'frame' dimensions */
+    padding: 46px 47px 99px 53px;
+    background-size: 420px 623px;
+    background-image: url('images/skins/phone.png');
+}
+.view.live iframe.tablet {
+    /* device 'screen' dimensions */
+    width: 1000px;
+    min-width: 1000px;
+    max-width: 1000px;
+    height: 600px;
+    min-height: 600px;
+    max-height: 600px;
+    /* device 'frame' dimensions */
+    padding: 85px 100px 80px 100px;
+    background-size: 1200px 767px;
+    background-image: url('images/skins/tablet.png');
+}
+
+.view.live .deviceSelect {
+    position: relative;
+    display: inline-block;
+    zoom: 1;
+    width: 115px;
+    z-index: 999;
+}
+.view.live .deviceSelect > a {
+    height: 16px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    line-height: 16px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#eee));
+}
+.view.live .deviceSelect > a:hover {
+    border: 1px solid #4D4D4D;
+}
+.view.live .deviceSelect > a > span {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-right: 16px;
+    padding-left: 5px;
+    color: #4D4D4D;
+}
+.view.live .deviceSelect .arrow {
+    float: right;
+    position: relative;
+    height: 0;
+    width: 0;
+    top: -13px;
+    left: -7px;
+    border-color: black transparent transparent transparent;
+    border-style: solid;
+    border-width: 4.2px;
+    border-top-width: 7.5px;
+}
+#deviceSelectMenu, #deviceSelectMenu ul {
+    list-style: none;
+    background: #F9F9F9;
+    padding: 0px;
+    margin: 0px;
+    border: solid 1px #CCC;
+    border-bottom: 0px;
+    width: 120px;
+    float: left;
+}
+#deviceSelectMenu li {
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 16px;
+    position: relative;
+    border-bottom: solid 1px #EEE;
+    cursor: pointer;
+}
+#deviceSelectMenu li:hover {
+    background-color: #2A8EFF;
+    color: #FFF;
+}
+#deviceSelectMenu li ul {
+    position: absolute;
+    left: -999em;
+    color: #4D4D4D;
+    width: 120px;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+#deviceSelectMenu li:hover ul{
+ left: 120px;
+ top: 0px;
+}
+#deviceSelectMenu li ul li {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.view.live .deviceSelect .arrow b {
+    display: block;
+}
+.view.live iframe.netbook {
+    /* device 'screen' dimensions */
+    width: 895px;
+    min-width: 895px;
+    max-width: 895px;
+    height: 508px;
+    min-height: 508px;
+    max-height: 508px;
+    /* device 'frame' dimensions */
+    padding: 58px 174px 357px 174px;
+    background-size: 1246px 920px;
+    background-image: url('images/skins/netbook.png');
+}
+
+/*
+  Panel widget base styles
+*/
+.panel {
+    background-color: #e4e5df;
+    width: 300px;
+    min-width: 10px;
+}
+.panel-section {
+}
+.panel-section-header {
+    display: block;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    margin: 0px;
+    margin-bottom: -2px;
+    padding: 0px;
+    box-align: center;
+    -webkit-box-align: center;
+    line-height: 25px;
+    color: #333333;
+    text-shadow: 1px 1px 1px #fff;
+    background-color: #fbfbfb;
+    background-image: -webkit-gradient(linear,
+                                       left top,
+                                       left bottom,
+                                       from(#fbfbfb),
+                                       to(#ececec));
+    background-image: -webkit-linear-gradient(top, #fbfbfb, #ececec);
+    background-image: url('images/pagesTitleBarBackground28px.png');
+    border-right: 1px solid #b9bab6;
+}
+.panel-section-header .title {
+    font-size : 11px;
+    font-family: OpenSans-SB;
+    font-weight: 600; /* semi-bold */
+    float: left;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+.panel-section-header .tool {
+    font-size : 10px;
+    font-weight: Regular;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-transform: capitalize;
+    float: right;
+}
+.panel-section-header .tool a:hover {
+    /* GRG */
+    color: #666;
+}
+.panel-section-header .tool a:active {
+    /* GRG */
+    color: #999;
+}
+.panel-section-header .divider {
+    background-image: url('images/addDuplicateDivider.png');
+    background-repeat: no-repeat;
+    margin-left: 12px;
+    margin-right: 12px;
+    border: none;
+    padding: 0px;
+}
+
+.panel-section-contents {
+    background-color: #E4E5DF;
+    padding: 5px;
+    /* this 30 + padding 5 top and bottom + 1px border = 41px like before */
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+}
+.left { border-right: 1px solid #b9bab6; }
+.right { border-left: 1px solid #b9bab6; }
+
+/*
+  Stage base styles
+*/
+.stage {
+    background-size: 11px 11px;
+    background-color: rgb(215,217,211);
+    background-image: -webkit-repeating-linear-gradient(left,
+                          rgba(128,128,128,0.1),
+                          transparent 1px,
+                          transparent 12px),
+                  -webkit-repeating-linear-gradient(top,
+                          rgba(128,128,128,0.1),
+                          transparent 1px,
+                          transparent 12px);
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+/*
+  Tools - Primary
+*/
+.tools-primary {
+    display: -webkit-box;
+    margin: 12px 0px 12px 0px;
+    box-pack: center;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+
+}
+.tools-primary .buttonStyle {
+    margin: 0px;
+    padding: 0px;
+    background: #6d8995;
+    border: none;
+    color: #fefffa;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 32px;
+    cursor: pointer;
+}
+.tools-primary button:first-child {
+    -webkit-border-top-left-radius: .5em !important;
+    -webkit-border-bottom-left-radius: .5em !important;
+}
+.tools-primary button:last-child {
+    -webkit-border-top-right-radius: .5em !important;
+    -webkit-border-bottom-right-radius: .5em !important;
+}
+.tools-primary #newProj {
+    background-image: url('images/newProjectButton_up.png');
+    width: 110px;
+}
+.tools-primary #newProj:focus,
+.tools-primary #newProj:hover,
+.tools-primary #newProj:active {
+    background-image: url('images/newProjectButton_down.png');
+}
+.tools-primary #importProj {
+    background-image: url('images/importProjectButton_up.png');
+    width: 109px;
+}
+.tools-primary #importProj:focus,
+.tools-primary #importProj:hover,
+.tools-primary #importProj:active {
+    background-image: url('images/importProjectButton_down.png');
+}
+.tools-primary #btnundo {
+    background-image: url('images/undoButton_up.png');
+    width: 61px;
+}
+.tools-primary #btnundo:focus,
+.tools-primary #btnundo:hover,
+.tools-primary #btnundo:active {
+    background-image: url('images/undoButton_down.png');
+}
+.tools-primary #btnredo {
+    background-image: url('images/redoButton_up.png');
+    width: 58px;
+}
+.tools-primary #btnredo:focus,
+.tools-primary #btnredo:hover,
+.tools-primary #btnredo:active {
+    background-image: url('images/redoButton_down.png');
+}
+.tools-primary #btncut {
+    background-image: url('images/cutButton_up.png');
+    width: 50px;
+}
+.tools-primary #btncut:focus,
+.tools-primary #btncut:hover,
+.tools-primary #btncut:active {
+    background-image: url('images/cutButton_down.png');
+}
+.tools-primary #btncopy {
+    background-image: url('images/copyButton_up.png');
+    width: 58px;
+}
+.tools-primary #btncopy:focus,
+.tools-primary #btncopy:hover,
+.tools-primary #btncopy:active {
+    background-image: url('images/copyButton_down.png');
+}
+.tools-primary #btnpaste {
+    background-image: url('images/pasteButton_up.png');
+    width: 70px;
+}
+.tools-primary #btnpaste:hover,
+.tools-primary #btnpaste:focus,
+.tools-primary #btnpaste:active {
+    background-image: url('images/pasteButton_down.png');
+}
+
+/*
+  Tools - Secondary
+*/
+.tools-secondary {
+    display: -webkit-box;
+    margin: 12px 0px 12px 0px;
+    box-pack: end;
+    -moz-box-pack: end;
+    -webkit-box-pack: end;
+}
+.tools-secondary .default-tools {
+    font-size: 12px;
+    font-family: OpenSans-SB;
+    font-weight: 600; /* semi-bold */
+    color: #f0f0f0;
+}
+.tools-secondary button {
+    background: none;
+    border: none;
+    margin-bottom: 0px;
+    color: #fefffa;
+}
+.tools-secondary input {
+    margin: 0px;
+    padding: 2px 5px;
+    border: none;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: inset 0 4px 2px -3px #999;
+    color: #9ca2a8;
+    font-style: italic;
+}
+.tools-secondary a {
+    cursor: pointer;
+    font-size: 12px;
+    font-family: OpenSans-SB;
+    font-weight: 600; /* semi-bold */
+    color: #f0f0f0;
+    text-shadow: -1px -1px 1px #111;
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-align: center;
+    -webkit-box-align: center;
+}
+.tools-secondary a:hover {
+    color: #fefffa;
+}
+.tools-secondary > button:first-child {
+    padding-left: .5em;
+}
+.tools-secondary > button:last-child {
+    padding-right: .5em;
+}
+
+/*
+  Outline View widget styles
+*/
+.treeView {
+    border: 1px solid rgba(0,0,0,0.6);
+    overflow: auto;
+    background: #fff;
+    border: none;
+    /* tweaked so the green highlight is 2px away from top/bottom */
+    padding: 2px 10px 4px 10px;
+    border: none;
+}
+
+.treeView ul {
+    padding-left: 0px;
+    margin: 0px 0px 0px -2px;
+}
+.treeView .widgetGroup {
+    padding-left: 20px;
+}
+.treeView li {
+    list-style: none;
+    clear: both;
+}
+.treeView li > a {
+    background: transparent;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer
+    border: transparent;
+    -webkit-border-radius: 4px;
+    -webkit-background-clip: padding-box;
+    padding: 0px 5px 3px 5px;
+    margin-left: -5px;
+}
+.treeView li > a.ui-selected {
+    border: transparent;
+    background: #4ae57b;
+    color: #424242;
+}
+.treeView li > a.focused.ui-selected,
+.treeView li > a.focused:not(.ui-selected) > span:first-child {
+    color: #424242;
+}
+.treeView li > a.focused.ui-selected {
+    border: 1px solid #2c7a94;
+    padding: 0px 4px 2px 4px;
+}
+.treeView li > a.focused:not(.ui-selected) > span:first-child {
+    outline: 1px solid #2c7a94;
+}
+.treeView span.widgetType {
+    font-size: 12px;
+    color: #111111;
+    font-style: normal;
+}
+.treeView span.widgetType:hover {
+    color: #2c7a94;
+}
+.treeView a.ui-selected span.widgetType {
+    color: #111111;
+}
+.outlineView {
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+}
+.outlineView span.pageTitle {
+    font-size: 12px;
+    color: #aaaaaa;
+    font-style: italic;
+}
+.outlineView a.ui-selected span.pageTitle {
+    color: #666;
+}
+.treeView span.folder {
+    float: left;
+    width: 10px;
+    height: 21px;
+    margin-right: 10px;
+    background-image: url("images/pageTreeArrowOpen.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer
+}
+.treeView span.folder.close {
+    background-image: url("images/pageTreeArrowClosed.png");
+    background-repeat: no-repeat;
+}
+.treeView span.singleItem {
+    margin-left: 2px;
+    margin-right: 12px;
+}
+.treeView li.label {
+    font-style: italic;
+    font-size: 10px;
+    margin-left: 2px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    color: #808080;
+}
+
+/*
+  Property View widget styles
+*/
+.propertyView {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #c8ced0;
+}
+.propertyView .property_title {
+    background-image: url('images/propertiesTitleBar.png');
+    background-repeat: repeat-x;
+    height: 24px;
+    font-size: 11px;
+    color: #333333;
+    font-family: OpenSans-SB;
+    font-weight: 600; /* semi-bold */
+    text-shadow: 1px 1px 1px #fff;
+    text-transform: uppercase;
+}
+.propertyView .title {
+    font-size : 12px;
+    font-family: OpenSans-SB;
+    font-weight: 600; /* semi-bold */
+    color: #333333;
+}
+.propertyView .title.disabled {
+    color: #999;
+}
+.propertyView input[type='checkbox'] {
+    vertical-align: middle;
+}
+.propertyView .propertyItems {
+    margin: 0px;
+    border: 0px;
+    padding: 10px;
+}
+.propertyView input {
+    height: 23px;
+    padding: 2px 5px;
+    border: none;
+    -webkit-border-radius: 5px;
+}
+.propertyView .optionInput {
+    width: 80%;
+}
+.propertyView .labelInput {
+    width: 100%;
+}
+.propertyView select {
+    width: 60%;
+    height: 23px;
+    -webkit-border-radius: 5px;
+}
+.propertyView .property_footer {
+    padding-bottom: 10px;
+    text-align: center;
+}
+.propertyView .buttonStyle {
+    height: 27px;
+    font-size: 0.8em;
+    text-align: center;
+    color: #424242;
+    border: 1px solid #a1a1a1;
+    line-height: 12px;
+    padding: 8px 20px 7px 20px;
+    background-color: #fbfbfb;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#ececec));
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.propertyView .datalist {
+    background: #fff;
+    border-top: 0;
+    top: 27px;
+    left: 0;
+    -webkit-box-shadow: 0 4px 5px rgba(0,0,0,.15);
+    z-index: 999;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    padding: 0px 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.propertyView .datalist .upload-button {
+    text-align: center;
+    border: 1px solid #a1a1a1;
+    line-height: 12px;
+    background-color: #fbfbfb;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.propertyView .datalist li {
+    clear:both;
+    cursor: pointer;
+    line-height: 80%;
+    padding: 7px 0px 8px;
+    margin: 0;
+    list-style: none;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, white));
+    background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, white 50%);
+}
+.propertyView .datalist li:hover {
+    background-image: none;
+    background-color:#b0c4de;
+}
+.propertyView .datalist > ul {
+    list-style-type: none ;
+    margin: 0px;
+    max-height: 200px;
+    padding: 0px;
+    position: relative;
+}
+.propertyView .datalist-input {
+    border-radius: 5px 5px 0px 0px;
+    outline-color: #E59700;
+    outline-style: auto;
+    outline-width: 5px;
+}
+.propertyView .buttonStyle:focus,
+.propertyView .buttonStyle:hover {
+    color: #eee;
+    background-color: #cccccc;
+    border-color: #424242;
+    background-image: -webkit-linear-gradient(top, #cccccc, #777777);
+}
+div.propertyItems {
+    display: table;
+    width: 100%;
+}
+div.propertyItems > div {
+    display: table-row;
+}
+div.propertyItems > div > label {
+    text-align: right;
+    padding-right: 10px;
+}
+div.propertyItems > div > div {
+    padding-right: 10px;
+}
+div.propertyItems > div > * {
+    display: table-cell;
+    padding-bottom: 8px;
+}
+table.selectTable {
+    width: 100%;
+}
+div.propertyItems label[for] {
+    text-transform: capitalize;
+}
+div.propertyItems label[for|=id] {
+    text-transform: uppercase;
+}
+div.propertyItems .delete.button {
+    text-indent: -3000px;
+    margin-top: 4px;
+    height: 25px;
+    width: 25px;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+/*
+  Widget View widget styles
+*/
+.widgetView {
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+    overflow: auto;
+}
+.widgetView:after {
+}
+
+/*
+  Palette View widget styles
+*/
+.paletteView {
+    overflow: auto;
+    padding: 2px;
+    cursor: pointer;
+}
+.paletteView .columns {
+    text-align: center;
+
+    -moz-column-width: 135px; /* Firefox */
+    -webkit-column-width: 135px; /* Safari and Chrome */
+    column-width: 140px;
+
+    -moz-column-gap: 10px; /* Firefox */
+    -webkit-column-gap: 5px; /* Safari and Chrome */
+    column-gap: 10px;
+}
+.paletteView img {
+    padding: 5px;
+}
+
+.ui-accordion .ui-accordion-header {
+    padding-left: 1.5em;
+}
+.ui-accordion .ui-accordion-header .ui-icon {
+    padding-left: 0;
+}
+
+/*
+  Page Picker widget
+*/
+.pageView.panel-section {
+    border-right: 1px solid #b9bab6;
+}
+.propertyView > .panel-section-header,
+.pageView > .panel-section-header {
+    background-image: url('images/pagesTitleBarBackground28px.png');
+    border-right: 1px solid #b9bab6;
+}
+.propertyView > .panel-section-contents,
+.pageView > .panel-section-contents {
+    border-right: 1px solid #b9bab6;
+    border-bottom: 1px solid #a4a6a6;
+    background-image: url('images/pageSelectorBackground.png');
+    background-repeat: repeat-x;
+    background-size: cover;
+    padding: 5px 0px 5px 0px;
+}
+.pageView > .panel-section-contents {
+    display: -webkit-box;
+}
+.page-arrow.left {
+    margin: 3px 0.5%;
+    padding: 0px;
+    width: 9%;
+    border: 0px;
+    height: 24px;
+    -webkit-transform: rotate(180deg);
+    background: url("images/pageArrow_dimmed.png") no-repeat 0px;
+    -webkit-box-flex: 1;
+    background-position: center;
+}
+.page-arrow.right {
+    margin: 3px 0.5%;
+    padding: 0px;
+    border: 0px;
+    width: 9%;
+    height: 24px;
+    background: url("images/pageArrow_dimmed.png") no-repeat 0px;
+    -webkit-box-flex: 1;
+    background-position: center;
+}
+.pageView .allwidth {
+    width: 1000%;
+}
+.pageView .pages-box {
+    overflow: hidden;
+    width: 80%;
+    padding: 0px;
+    -webkit-box-flex: 0;
+}
+.page-arrow.ui-state-active {
+    background-image: url("images/pageArrow_up.png");
+}
+.page-arrow.ui-state-active:hover {
+    background-image: url("images/pageArrow_down.png");
+}
+.panel-section-contents .pageIcon {
+    background-image: url("images/pageIcon_off.png");
+    width: 30px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    float: left;
+    margin: 3px 0px;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    background-repeat: no-repeat;
+    background-position: 5px 0px;
+}
+.pageIcon.ui-selected {
+    background-image: url("images/pageIcon_on.png");
+    font-weight: bold;
+    color: #333333 !important;
+}
+#liveView .pageView .tool {
+    display: none;
+}
+.pageIcon:hover,
+#addPage:hover, #copyPage:hover {
+    cursor: pointer;
+}
+.pageIcon:hover {
+    background-image: url("images/pageIcon_hover.png");
+}
+.pageIcon.ui-selected:hover {
+    background-image: url("images/pageIcon_on.png");
+}
+
+/*
+  Drag and Sort behavior and state styles
+*/
+.nrc-palette-widget.ui-draggable-dragging,
+.nrc-palette-widget.ui-sortable-helper {
+    display: inline-block;
+    border: 1px solid #da1c2e !important;
+}
+
+.ribDialog {
+    padding: 0;
+    margin: 0;
+    display: block;
+    webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.ui-dialog {
+    padding: 0px;
+}
+.ui-dialog .ui-dialog-content{
+    padding: 0px;
+    font-size: 14px;
+    font-family: OpenSans-SB;
+    font-weight: 600; /* semi-bold */
+    font-color: #333;
+}
+
+.ui-dialog .buttonStyle{
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    color: #424242;
+    border: 1px solid #a1a1a1;
+    line-height: 12px;
+    padding: 8px 20px 7px 20px;
+    background-color: #fbfbfb;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#ececec));
+    background-image: -webkit-linear-gradient(top, #fbfbfb, #ececec);
+    background-image: -moz-linear-gradient(top, #fbfbfb, #ececec);
+    background-image: -ms-linear-gradient(top, #fbfbfb, #ececec);
+    background-image: -o-linear-gradient(top, #fbfbfb, #ececec);
+    background-image: linear-gradient(to bottom, #fbfbfb, #ececec);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    text-decoration: none;
+}
+.ui-dialog .buttonStyle:hover {
+    color: #eee;
+    background-color: #cccccc;
+    border-color: #424242;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#cccccc), to(#777777));
+    background-image: -webkit-linear-gradient(top, #cccccc, #777777);
+    background-image: -moz-linear-gradient(top, #cccccc, #777777);
+    background-image: -ms-linear-gradient(top, #cccccc, #777777);
+    background-image: -o-linear-gradient(top, #cccccc, #777777);
+    background-image: linear-gradient(to bottom, #cccccc, #777777);
+}
+.ribDialog > div {
+    -webkit-border-radius: 12px;
+    margin: 0px;
+    padding: 0px;
+    bolder: 0px;
+    border-radius: 12px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: transparent;
+    zoom: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.ribDialog .wrap_left {
+    width: 385px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: #fff;
+}
+.ribDialog .wrap_right {
+    width: 385px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #cbced0;
+    background-image: url('images/newProjectFPOgraphic.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ribDialog .div-bottom{
+    position: absolute;
+    bottom: 0px;
+    width: 385px;
+    height: 80px;
+}
+.ribDialog .ui-dialog-buttonpane {
+    border-top-width: 0px;
+}
+#pageDialog.ribDialog .ui-dialog-buttonpane {
+    margin-left: 115px;
+}
+.ribDialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: none;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+}
+.ribDialog fieldset {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.ribDialog legend {
+    height: 28px;
+}
+.ribDialog .bottom {
+    position: absolute;
+    bottom: 32px;
+    left: 145px;
+}
+.ribDialog label {
+    float: left;
+    text-align: right;
+    width: 125px;
+    margin-left: 0px;
+    margin-right: 20px;
+    border: 0px;
+    padding: 0px;
+}
+.ribDialog input[type="text"] {
+    padding: 0px;
+    margin-left: 0px;
+    height: 19px;
+    width: 216px;
+}
+.ribDialog form {
+    height: 100%;
+}
+.ribDialog select {
+    margin-left: 0px;
+    width: 220px;
+    background: #eaf1f4;
+}
+.ribDialog #uploadTheme {
+    cursor: pointer;
+    margin-right: 40px;
+    float: right;
+}
+.ribDialog .dialog-rows-distance {
+    margin-top: 30px;
+}
+.ribDialog .buttonStyle {
+    width: 60px;
+    height: 12px;
+}
+.ribDialog .linkStyle {
+    background: none !important;
+    border: none !important;
+    text-decoration: underline;
+}
+.ribDialog .linkStyle:hover {
+    color: #888;
+}
+.ribDialog ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.ribDialog li {
+    clear: both;
+}
+.ribDialog fieldset {
+    display: inline;
+}
+.ribDialog .fieldLi {
+    clear: both;
+    margin: 0px;
+    height: 23px;
+    margin-left: 20px;
+    vertical-align: middle;
+    line-height: 23px;
+}
+.ribDialog .fieldLabel {
+    width: 100px;
+    float: left;
+    margin: 0px;
+    margin-left: 10px;
+    padding: 0px;
+    text-align: left;
+}
+.ribDialog .fieldInput {
+    float: left;
+    width: 10px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+.cm-active {
+    font-weight: bold;
+}
+.cm-inactive {
+    color: #b3b3b3;
+}
+
+.CodeMirror {
+    background-color: white
+}
+
+/*
+ * css for project box
+ */
+.projectView {
+    padding: .5em;
+}
+
+.projectBox {
+    float: left;
+    margin: 20px;
+    width: 230px;
+    height: 170px;
+    border: 3px solid #fff;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.15);
+}
+
+.projectBox.ui-state-active {
+    border: 3px solid #4ae57b;
+    -webkit-border-radius: 13px;
+}
+
+.titleBar {
+    width: 230px;
+    height: 31px;
+    position: relative;
+    background: #545f6a;
+    -webkit-border-radius: 10px 10px 0 0;
+}
+
+.titleBar span {
+    margin: .5em;
+    padding: 0;
+    position: absolute;
+    width: 140px;
+    height: 31px;
+    color: #fff;
+    font-size: 0.8em;
+    font-family: OpenSans-SB;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.titleBar input {
+    width: 150px;
+    margin: 3px;
+}
+
+.openButton {
+    background-image: url("images/openButton_up.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    padding-top: 8px;
+    top: 1px;
+    right: 1px;
+    height: 22px;
+    min-width: 71px;
+    cursor: pointer;
+    -webkit-border-top-right-radius: 9px;
+}
+
+.openButton:hover, .openButton:focus {
+    opacity: 0.9;
+}
+
+.openButton:active {
+    background-image: url("images/openButton_down.png");
+    background-repeat: no-repeat;
+}
+
+.projectBox .content {
+    padding: 6px;
+}
+.thumbnail-wrapper {
+    overflow:hidden;
+    -webkit-box-shadow: .1em .1em .2em .15em #595b55;
+    border: 2px solid #fff;
+    -webkit-border-radius: 10px;
+    width: 120px;
+    height: 124px;
+}
+.thumbnail {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    background-color: white;
+}
+.rightSide {
+    font-family: OpenSans;
+    font-size: 0.6em;
+    color: #444444;
+    text-align: right;
+    line-height: 125%;
+}
+.projectBox .button {
+    position: absolute;
+    text-decoration: underline;
+    padding-top: 5px;
+    padding-right: 30px;
+    right: 10px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+.clone.button{
+    padding-left: 3px;
+    bottom: 33px;
+    background-image: url("images/cloneButton_up.png");
+}
+.projectBox .button:hover, .projectBox .button:focus,
+div.propertyItems .button:hover, div.propertyItems .button:focus {
+    opacity: 0.8;
+}
+
+.clone.button:active {
+    background-image: url("images/cloneButton_down.png");
+    background-repeat: no-repeat;
+}
+
+.delete.button{
+    bottom: 3px;
+    background-image: url("images/deleteButton_up.png");
+}
+
+.delete.button:active {
+    background-image: url("images/deleteButton_down.png");
+    background-repeat: no-repeat;
+}
+
+.addDevice {
+    cursor: pointer;
+    padding: 20px;
+    background: url("images/addDevice_up.png") no-repeat center;
+}
+.addDevice:active {
+    background-image: url("images/addDevice_down.png");
+}
+.editDevice {
+    cursor: pointer;
+    padding: 20px;
+    background: url("images/editDevice_up.png") no-repeat center;
+}
+.editDevice:active {
+    background-image: url("images/editDevice_down.png");
+}
+.deviceSetting label
+{
+    width: 8em;
+    float: left;
+    text-align: right;
+    margin-right: 0.5em;
+    display: block;
+    margin-top: 23px
+}
+.deviceSetting > select,
+.deviceSetting input {
+    margin-top: 23px;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.deviceSetting input[type='number'] {
+    width:5em;
+    size: 4;
+}
+
+p.title {
+    margin-left:1em;
+    margin-right: 1em;
+}
+#buttonSet {
+    text-align: center;
+}
+#buttonSet * {
+    margin: 1.5em 1em 1.5em 1em;
+    min-width: 25%;
+}
+
+.rotateDevice {
+    cursor: pointer;
+    padding: 20px;
+    background: url("images/rotateDevice_up.png") no-repeat center;
+}
+.rotateDevice:active {
+    background-image: url("images/rotateDevice_down.png");
+}
+.screenCoordinate {
+    width: 4em;
+    margin-top: 6px;
+}
+input.screenCoordinate::-webkit-inner-spin-button {
+    -webkit-appearance: none
+}
+
+.projectViewButton {
+    background: url("images/homeButton_up.png") no-repeat 0 0;
+    width: 45px;
+}
+.projectViewButton:focus,
+.projectViewButton:hover,
+.projectViewButton:active {
+    background-image: url("images/homeButton_active.png");
+}
+.ui-tabs-selected >.projectViewButton {
+    background-image: url("images/homeButton_down.png");
+}
+.layoutViewButton {
+    background: url("images/layoutButton_up.png") no-repeat 0 0;
+    width: 80px;
+}
+.layoutViewButton:focus,
+.layoutViewButton:hover,
+.layoutViewButton:active {
+    background-image: url("images/layoutButton_active.png");
+}
+.ui-tabs-selected >.layoutViewButton {
+    background-image: url("images/layoutButton_down.png");
+}
+.codeViewButton {
+    background: url("images/codeButton_up.png") no-repeat 0 0;
+    width: 71px;
+}
+.codeViewButton:focus,
+.codeViewButton:hover,
+.codeViewButton:active {
+    background-image: url("images/codeButton_active.png");
+}
+.ui-tabs-selected >.codeViewButton {
+    background-image: url("images/codeButton_down.png");
+}
+.liveViewButton {
+    background: url("images/previewButton_up.png") no-repeat 0 0;
+    width: 87px;
+}
+.liveViewButton:focus,
+.liveViewButton:hover,
+.liveViewButton:active {
+    background-image: url("images/previewButton_active.png");
+}
+.ui-tabs-selected >.liveViewButton {
+    background-image: url("images/previewButton_down.png");
+}
+.centerImage {
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+.aboutDlg > .ui-dialog-content {
+    min-width: 100%;
+    min-height: 100%;
+}
+.aboutDlg +.ui-widget-overlay {
+    top: -1em;
+    left: -1em;
+}
+#exportDialog {
+    padding: 0.8em 1.2em;
+}
+#exportDialog .buttonStyle {
+    margin: 0 0.6em;
+}

@@ -1,0 +1,61 @@
+{
+   "Phones": {
+       "Default": {
+           "skin": {
+               "href": "src/css/images/skins/phone.png",
+               "width": 420,
+               "height": 623
+           },
+           "screen": {
+               "offset": {
+                   "top": 45,
+                   "right": 47,
+                   "bottom": 95,
+                   "left": 52
+               },
+               "width": 320,
+               "height": 480
+           }
+       }
+   },
+
+   "Tablets": {
+       "Default": {
+           "skin": {
+               "href": "src/css/images/skins/tablet.png",
+               "width": 1200,
+               "height": 767
+           },
+           "screen": {
+               "offset": {
+                   "top": 84,
+                   "right": 99,
+                   "bottom": 82,
+                   "left": 99
+               },
+               "width": 1000,
+               "height": 600
+           }
+       }
+   },
+
+   "Netbooks": {
+       "Default": {
+           "skin": {
+               "href": "src/css/images/skins/netbook.png",
+               "width": 1246,
+               "height": 920
+           },
+           "screen": {
+               "offset": {
+                   "top": 57,
+                   "right": 174,
+                   "bottom": 350,
+                   "left": 173
+               },
+               "width": 895,
+               "height": 508
+           }
+       }
+   }
+}

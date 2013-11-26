@@ -1,0 +1,138 @@
+=TODO=
+
+[ADM]
+=====
+
+Definite
+--------
+P2 - convert ADM API to use exceptions for errors
+P3 - move test utils into a separate .js file
+P3 - add ADM unit tests
+
+Need Thought
+------------
+P2 - higher-level validation like id can only start with alpha character
+P1 - consider preventing selection outside of active page, or as Xu suggests,
+     making selection outside automatically change active page
+P1 - consider moving active page and selection concepts to design node
+P2 - consider validating widget registry entries on startup
+
+[Design View]
+=============
+P2 - Make tools/panels movable to "dock" positions
+     - Not necessarily true flexible docking, but Shane is working on a scheme
+       to at least give us flexibility in fixed pane layouts, resizable in one
+       dimension
+
+P2 - Make all DOM interactions into a "framework" class with well
+  defined APIs for things like:
+  * change page
+  * select object
+  * refresh (or reload) page
+  * refresh (or reload) document
+  * setting framework specific options (e.g. default transitions)
+  * generic message handler (?)
+  * delete object
+  * move object
+  * etc...
+
+- Bugs to be fixed:
+  * Flip toggle switch widget in the design view cannot be selected.
+    - Update 1/3/12: Selectable but ugly and clicks fall through to it
+  * The option widget within a select menu does not show correctly in the design view.
+    - New design is to make options a property of select
+
+[FileIO]
+========
+- See new project management features in UX design, and PTSDK-222 thru PTSDK-232,
+  especially PTSDK-224
+
+[General]
+=========
+P2 - Rename template.js to something more appropriate for what it actually
+  does, which is handling the embedded design view contents styling and
+  behaviors in the framework context as opposed to the RIB JS/CSS
+  context
+
+P1 - Separate "controller" and "design view" logic in js/builder.js.  For
+  example, split it into two files... and make them more object oriented
+
+P2 - Start saving context for UI states, preferences, current design, etc...
+
+P3 - App title is currently always "title" which can't be changed; perhaps
+     this can just be removed, or made blank -- or it should be exposed as a
+     general property of the design somewhere. If that's to show up in the
+     property pane, we would need some way to select the "design".
+
+P2 - It would be nice to preserve the ability to write pure jQuery Mobile apps,
+     which would require something like a design setting to turn Tizen widgets
+     on or off. Maybe better as a decision you make when opening a new project,
+     so we don't have to worry about deleting Tizen widgets if you turn those
+     off.
+
+[Palette]
+=========
+
+P1 - Convert palette.json and palette.js to be usable for BWidget objects
+ Migrate the non-base widgets from widgets.js to palette JSON
+  * Base, Design, Page, Header, Footer and maybe Content will remain
+    in widgets.js
+  * Button, TextInput and others should migrate to a JSON format
+
+P2 - Add additional jQM widgets to the palette JSON:
+  * Password Input
+  * Validated Inputs (number, email, url, telephone, etc.)
+  * Search Input
+
+P2 - Convert the palette to a "palette.d" format, where new, custom palettes
+  can be added by simply adding new files into that dir.  Needs some high
+  level design documentation.
+
+[Properties]
+============
+
+[Serialize]
+===========
+
+[Template]
+==========
+
+P2 - Create additional templates
+
+P2 - Add a "template picker" at startup and pre-populate the content area with
+  selected template
+
+[Widgets]
+P1 - Provide real UX icons for widgets
+P2 - Perhaps display placeholder text in TextInput to guide user
+     (e.g. Enter hint text here) -- but only in design canvas
+P3 - Someday we might want to distinguish between the order properties are
+     listed in properties pane and the order they are written in codegen
+P3 - Could make form elements based on a common FormElement to inherit
+     the name attribute
+P3 - Whether or not to wrap widget and label with a fieldcontain could be
+     an option on the widget
+P2 - Add the ability to insert simple HTML at any point in the design:
+       text, <p> and <br> tags, <h?> tags, <b>, <i>, character entities, ...
+
+- Might make sense to expose "class" property on everything
+- Could make sense to expose Block elements so their ids could be set
+
+[Code Gen]
+==========
+
+[Code View]
+===========
+
+[Preview]
+=========
+P2 - If you change pages with a button (e.g. with target "#page2") in the
+     preview, it might be nice if we noticed and updated our selection. OTOH,
+     maybe not.
+
+P2 - If you navigate as above in the preview, probably when you come back to
+     preview later it should start you back on the same page you were looking
+     at in the design canvas again. Could use UX thought.
+
+[Outline View]
+==============

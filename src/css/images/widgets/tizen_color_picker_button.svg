@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="41px" viewBox="0 0 128 41" enable-background="new 0 0 128 41" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="41"/>
+</g>
+<rect fill="#627278" width="5" height="41"/>
+<text transform="matrix(1 0 0 1 45 18.4263)"><tspan x="0" y="0" font-family="'OpenSans-Semibold'" font-size="11" id="tizen_color_picker_button_title_line_one">Color Picker</tspan><tspan x="0" y="12" font-family="'OpenSans-Semibold'" font-size="11" id="tizen_color_picker_button_title_line_two">Button</tspan></text>
+<rect x="13" y="9" fill="#D7D8D9" width="24" height="24"/>
+<rect x="15" y="11" fill="#2E3192" width="20" height="20"/>
+</svg>

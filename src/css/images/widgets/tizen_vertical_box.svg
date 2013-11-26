@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="57px" viewBox="0 0 128 57" enable-background="new 0 0 128 57" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="57"/>
+</g>
+<rect fill="#627278" width="5" height="57"/>
+<text transform="matrix(1 0 0 1 46.4473 26.4263)"><tspan x="0" y="0" font-family="'OpenSans-Semibold'" font-size="11" id="tizen_vertical_box_title_line_one">Vertical Box</tspan><tspan x="13.42" y="13.201" font-family="'OpenSans-Semibold'" font-size="11" id="tizen_vertical_box_title_line_two">Layout</tspan></text>
+<g>
+	<path fill="#698A97" d="M36,9v11H15V9H36 M37,8H14v13h23V8L37,8z"/>
+</g>
+<g>
+	<path fill="#698A97" d="M36,26v11H15V26H36 M37,25H14v13h23V25L37,25z"/>
+</g>
+<g>
+	<path fill="#698A97" d="M36,43v11H15V43H36 M37,42H14v13h23V42L37,42z"/>
+</g>
+<rect x="10" y="50" fill="#FFFFFF" width="31" height="7"/>
+</svg>

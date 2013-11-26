@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="47px" viewBox="0 0 128 47" enable-background="new 0 0 128 47" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="47"/>
+</g>
+<rect fill="#627278" width="5" height="47"/>
+<text transform="matrix(1 0 0 1 12 16.4263)" font-family="'OpenSans-Semibold'" font-size="11" id="tizen_color_palette_title">Color Palette</text>
+<g>
+	<rect x="12" y="24" fill="#2E3192" width="16" height="16"/>
+	<rect x="35" y="24" fill="#234A7F" width="16" height="16"/>
+	<rect x="57" y="24" fill="#17636B" width="16" height="16"/>
+	<rect x="80" y="24" fill="#0C7B58" width="16" height="16"/>
+	<rect x="103" y="24" fill="#009444" width="16" height="16"/>
+</g>
+</svg>

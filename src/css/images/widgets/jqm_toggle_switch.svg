@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="56px" viewBox="0 0 128 56" enable-background="new 0 0 128 56" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="56"/>
+</g>
+<rect fill="#627278" width="5" height="56"/>
+<g>
+	<path fill="#698A97" d="M24.212,48C18.305,48,13.5,43.29,13.5,37.5S18.305,27,24.212,27h44.576C74.694,27,79.5,31.71,79.5,37.5
+		S74.694,48,68.788,48H24.212z"/>
+	<path fill="#435961" d="M68.895,27c5.631,0,10.158,4.486,10.158,10s-4.634,10-10.265,10H24.212C18.581,47,14,42.514,14,37
+		s4.581-10,10.212-10H69 M68.788,26H24.212C18.02,26,13,30.926,13,37c0,6.075,5.02,11,11.212,11h44.576C74.98,48,80,43.075,80,37
+		C80,30.926,74.98,26,68.788,26L68.788,26z"/>
+</g>
+<text transform="matrix(1 0 0 1 12 16.4263)" font-family="'OpenSans-Semibold'" font-size="11" id="jqm_toggle_switch_title">Toggle Switch</text>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="62.5005" y1="47.2002" x2="62.5005" y2="27.3916">
+	<stop  offset="0" style="stop-color:#DDDDDD"/>
+	<stop  offset="1" style="stop-color:#FDFDFD"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" d="M56,47c-5.523,0-10-4.478-10-10s4.477-10,10-10h13c5.523,0,10,4.478,10,10s-4.477,10-10,10H56z"/>
+<text transform="matrix(1 0 0 1 23 41.4258)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="11" id="jqm_toggle_switch_button_text">On</text>
+</svg>

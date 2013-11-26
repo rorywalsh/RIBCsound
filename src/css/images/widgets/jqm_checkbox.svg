@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="31px" viewBox="0 0 128 31" enable-background="new 0 0 128 31" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="31"/>
+</g>
+<rect fill="#627278" width="5" height="31"/>
+<text transform="matrix(1 0 0 1 36 19.4258)" font-family="'OpenSans-Semibold'" font-size="11" id="jqm_checkbox_title">Checkbox</text>
+<g>
+	<radialGradient id="SVGID_1_" cx="21" cy="17" r="8.2324" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.4296" style="stop-color:#FDFDFD"/>
+		<stop  offset="1" style="stop-color:#DDDDDD"/>
+	</radialGradient>
+	<path fill="url(#SVGID_1_)" d="M28,20.274C28,22.332,26.332,24,24.274,24h-6.549C15.668,24,14,22.332,14,20.274v-6.549
+		C14,11.668,15.668,10,17.726,10h6.549C26.332,10,28,11.668,28,13.726V20.274z"/>
+	<path fill="#B7B8BD" d="M24.887,10C26.666,10,28,11.447,28,13.226v6.549C28,21.553,26.553,23,24.774,23h-6.549
+		C16.447,23,15,21.553,15,19.774v-6.549C15,11.447,16.447,10,18.226,10H25 M24.774,9h-6.549C15.892,9,14,10.892,14,13.226v6.549
+		C14,22.108,15.892,24,18.226,24h6.549C27.108,24,29,22.108,29,19.774v-6.549C29,10.892,27.108,9,24.774,9L24.774,9z"/>
+</g>
+<polygon fill="#698A97" points="19.645,21.509 27.99,13.164 26.194,11.367 19.539,18.022 16.793,15.276 15.138,16.932 "/>
+</svg>

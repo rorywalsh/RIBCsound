@@ -1,0 +1,3 @@
+ function SetFreq(){
+  alert("test");
+ }

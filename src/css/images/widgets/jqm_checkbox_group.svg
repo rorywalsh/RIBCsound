@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="92px" viewBox="0 0 128 92" enable-background="new 0 0 128 92" xml:space="preserve">
+<defs>
+  <style>
+    <![CDATA[
+        @font-face {
+            font-family: OpenSans-SemiBold;
+            src: url('../../fonts/OpenSans-Semibold.ttf');
+        }
+    ]]>
+  </style>
+</defs>
+<g>
+	<rect fill="#FFFFFF" width="128" height="92"/>
+</g>
+<rect fill="#627278" width="5" height="92"/>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="65.5" y1="45.1899" x2="65.5" y2="26.3713">
+		<stop  offset="0" style="stop-color:#DDDDDD"/>
+		<stop  offset="1" style="stop-color:#FDFDFD"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M12,45V33c0-4.136,3.327-7,6.803-7h94.395c3.476,0,5.803,2.864,5.803,7v12H12z"/>
+	<path fill="#A7A9AC" d="M113.099,26c3.199,0,5.901,3.14,5.901,7v11H13V33c0-3.86,2.603-7,5.803-7H113 M113.197,25H18.803
+		C15.046,25,12,28.582,12,33v12h108V33C120,28.582,116.955,25,113.197,25L113.197,25z"/>
+</g>
+<text transform="matrix(0.9971 0 0 1 12.0005 16.1602)" font-family="'OpenSans-Semibold'" font-size="11" id="jqm_checkbox_group_title">Checkbox Group</text>
+<g>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="65.5" y1="83.1904" x2="65.5" y2="64.3718">
+		<stop  offset="0" style="stop-color:#DDDDDD"/>
+		<stop  offset="1" style="stop-color:#FDFDFD"/>
+	</linearGradient>
+	<path fill="url(#SVGID_2_)" d="M18.803,83C15.327,83,12,79.136,12,75V64h107v11c0,4.136-2.327,8-5.803,8H18.803z"/>
+	<path fill="#A7A9AC" d="M119,64v11c0,3.859-2.604,7-5.803,7H18.803C15.603,82,13,78.859,13,75V64H119 M120,63H12v12
+		c0,4.418,3.045,8,6.803,8h94.395c3.756,0,6.803-3.582,6.803-8V63L120,63z"/>
+</g>
+<g>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="65.5" y1="64.1904" x2="65.5" y2="45.3723">
+		<stop  offset="0" style="stop-color:#DDDDDD"/>
+		<stop  offset="1" style="stop-color:#FDFDFD"/>
+	</linearGradient>
+	<rect x="12" y="45" fill="url(#SVGID_3_)" width="107" height="19"/>
+	<path fill="#A7A9AC" d="M119,45v18H13V45H119 M120,44H12v20h108V44L120,44z"/>
+</g>
+<text transform="matrix(1 0 0 1 38 37.8555)" fill="#939598" font-family="'OpenSans-Semibold'" font-size="8" id="jqm_checkbox_group_option_one_text">Option One</text>
+<text transform="matrix(1 0 0 1 38 56.8555)" fill="#939598" font-family="'OpenSans-Semibold'" font-size="8" id="jqm_checkbox_group_option_two_text">Option Two</text>
+<text transform="matrix(1 0 0 1 38 75.8555)" fill="#939598" font-family="'OpenSans-Semibold'" font-size="8" id="jqm_checkbox_group_option_three_text">Option Three</text>
+<g>
+	<radialGradient id="SVGID_4_" cx="26" cy="36" r="5.8803" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.4296" style="stop-color:#FDFDFD"/>
+		<stop  offset="1" style="stop-color:#DDDDDD"/>
+	</radialGradient>
+	<path fill="url(#SVGID_4_)" d="M31,38.401C31,39.836,29.836,41,28.401,41h-4.803C22.164,41,21,39.836,21,38.401v-4.803
+		C21,32.164,22.164,31,23.599,31h4.803C29.836,31,31,32.164,31,33.599V38.401z"/>
+	<path fill="#B7B8BD" d="M28.951,31C30.108,31,31,31.941,31,33.099v4.803C31,39.059,30.059,40,28.901,40h-4.803
+		C22.941,40,22,39.059,22,37.901v-4.803C22,31.941,22.941,31,24.099,31H29 M28.901,30h-4.803C22.387,30,21,31.387,21,33.099v4.803
+		C21,39.613,22.387,41,24.099,41h4.803C30.613,41,32,39.613,32,37.901v-4.803C32,31.387,30.613,30,28.901,30L28.901,30z"/>
+</g>
+<polygon fill="#698A97" points="25.209,39.294 31.328,33.174 30.012,31.857 25.131,36.737 23.117,34.723 21.903,35.938 "/>
+<g>
+	<radialGradient id="SVGID_5_" cx="26" cy="55" r="5.8803" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.4296" style="stop-color:#FDFDFD"/>
+		<stop  offset="1" style="stop-color:#DDDDDD"/>
+	</radialGradient>
+	<path fill="url(#SVGID_5_)" d="M31,57.401C31,58.837,29.836,60,28.401,60h-4.803C22.164,60,21,58.837,21,57.401v-4.803
+		C21,51.163,22.164,50,23.599,50h4.803C29.836,50,31,51.163,31,52.599V57.401z"/>
+	<path fill="#B7B8BD" d="M28.951,50C30.108,50,31,50.941,31,52.099v4.803C31,58.059,30.059,59,28.901,59h-4.803
+		C22.941,59,22,58.059,22,56.901v-4.803C22,50.941,22.941,50,24.099,50H29 M28.901,49h-4.803C22.387,49,21,50.387,21,52.099v4.803
+		C21,58.613,22.387,60,24.099,60h4.803C30.613,60,32,58.613,32,56.901v-4.803C32,50.387,30.613,49,28.901,49L28.901,49z"/>
+</g>
+<polygon fill="#698A97" points="25.209,58.294 31.328,52.174 30.012,50.857 25.131,55.737 23.117,53.723 21.903,54.938 "/>
+<g>
+	<radialGradient id="SVGID_6_" cx="26" cy="74" r="5.8803" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.4296" style="stop-color:#FDFDFD"/>
+		<stop  offset="1" style="stop-color:#DDDDDD"/>
+	</radialGradient>
+	<path fill="url(#SVGID_6_)" d="M31,76.401C31,77.837,29.836,79,28.401,79h-4.803C22.164,79,21,77.837,21,76.401v-4.803
+		C21,70.163,22.164,69,23.599,69h4.803C29.836,69,31,70.163,31,71.599V76.401z"/>
+	<path fill="#B7B8BD" d="M28.951,69C30.108,69,31,69.941,31,71.099v4.803C31,77.059,30.059,78,28.901,78h-4.803
+		C22.941,78,22,77.059,22,75.901v-4.803C22,69.941,22.941,69,24.099,69H29 M28.901,68h-4.803C22.387,68,21,69.387,21,71.099v4.803
+		C21,77.613,22.387,79,24.099,79h4.803C30.613,79,32,77.613,32,75.901v-4.803C32,69.387,30.613,68,28.901,68L28.901,68z"/>
+</g>
+</svg>
