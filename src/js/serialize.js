@@ -698,12 +698,16 @@ $(function () {
         to work for other input types. 
         ==========================================================================*/ 
         var completeHTMLText = String(resultHTML.html);   
-        var node_list = resultHTML.doc.getElementsByTagName('input');
+        var input_node_list = resultHTML.doc.getElementsByTagName('input');
+        var select_node_list = resultHTML.doc.getElementsByTagName('select');
         var jsEventMethods = new String();
         var jsAttachListeners = new String();
         var jsModuleDidLoad = new String();
-        var jsSetChannel = new String();
+        var jsSetCsoundSelectChannel = new String();
+        var jsSetCsoundCheckboxChannel = new String();
+        var jsSetCsoundRangeChannel = new String();
         var jsCsoundEngine = new String();
+
         var jsHandleMessages = new String();
         var nodeIds = new Array();
 
@@ -714,29 +718,71 @@ $(function () {
         jsAttachListeners = "\nfunction attachListeners() {\n";
         jsEventMethods= "";
 
-        for (var i = 0; i < node_list.length; i++) {
-            var node = node_list[i];           
+
+        //grab all 'input and checkbox' types and set up javascript code. 
+        for (var i = 0; i < input_node_list.length; i++) {
+            var node = input_node_list[i];           
              console.log(node.value);
             //get all range types and add javascript for them
-            if (node.getAttribute('type') == 'range') {
+            if (node.getAttribute('type') == 'range' ||
+                node.getAttribute('type') == 'checkbox') {
                 //look after the event handlers
+                jsAttachListeners += '$(\'#'+node.id+'\').bind(\'change\', Set_'+node.id+');\n';
+                                       
+               // '//document.getElementById("'+node.id+'").addEventListener("change", Set_'+node.id+');\n';     
+                //set up the event methods
+                if(node.getAttribute('type')=='range')
+                jsEventMethods+=    '\nfunction Set_'+node.id+'()\n'+
+                                    '{\n'+
+                                    '    SetCsoundRangeChannel(\''+node.id+'\');\n'+
+                                    '}\n';
+                else if(node.getAttribute('type')=='checkbox')
+                jsEventMethods+=    '\nfunction Set_'+node.id+'()\n'+
+                                    '{\n'+
+                                    '    SetCsoundCheckboxChannel(\''+node.id+'\');\n'+
+                                    '}\n';
+                    
+                nodeIds.push(node.id);
+            }
+
+
+        } 
+
+        //grab all 'select' types and set up javascript code. 
+        for (var i = 0; i < select_node_list.length; i++) {
+            var node = select_node_list[i];           
+             console.log(node.id);
+
                 jsAttachListeners += '$(\'#'+node.id+'\').bind(\'change\', Set_'+node.id+');\n';
                                        
                // '//document.getElementById("'+node.id+'").addEventListener("change", Set_'+node.id+');\n';     
                 //set up the event methods
                 jsEventMethods+=    '\nfunction Set_'+node.id+'()\n'+
                                     '{\n'+
-                                    '    SetCsoundChannel(\''+node.id+'\');\n'+
+                                    '    SetCsoundSelectChannel(\''+node.id+'\');\n'+
                                     '}\n';
-                nodeIds.push(node.id);
-            }
         } 
 
-        jsSetChannel =  '\nfunction SetCsoundChannel(name) {\n'+
+        //event handlers for each jquery widget
+        jsSetCsoundRangeChannel =  '\nfunction SetCsoundRangeChannel(name) {\n'+
                         'var val = document.getElementById(name).value\n'+
                         'csound.SetChannel(name, val);\n'+ 
                         'console.log(name+":"+String(val));\n'+ 
                         '}\n';
+
+        jsSetCsoundSelectChannel =  '\nfunction SetCsoundSelectChannel(name) {\n'+
+                        'var val = $("#\"+name+\" option:selected\").val();\n'+ 
+                        'csound.SetChannel(name, val);\n'+ 
+                        'console.log(name+":"+String(val));\n'+ 
+                        '}\n';
+
+        jsSetCsoundCheckboxChannel =  '\nfunction SetCsoundCheckboxChannel(name) {\n'+
+                        'var str = \"#\"+name;\n'+
+                        'var val = $(str).is(\":checked\");\n'+ 
+                        'csound.SetChannel(name, Number(val));\n'+ 
+                        'console.log(name+":"+Number(val));\n'+ 
+                        '}\n';
+
 
         jsAttachListeners+="}\n";
 
@@ -759,7 +805,13 @@ $(function () {
 
         var complteJavascript = new String();
         complteJavascript = '\n<script type="text/javascript" src="csound.js"></script>\n<script type="text/javascript">\n'+
-                                jsModuleDidLoad+jsHandleMessages+jsEventMethods+jsAttachListeners+jsSetChannel+
+                                jsModuleDidLoad+
+                                jsHandleMessages+
+                                jsEventMethods+
+                                jsAttachListeners+
+                                jsSetCsoundRangeChannel+
+                                jsSetCsoundSelectChannel+
+                                jsSetCsoundCheckboxChannel+
                                 '</script>'
 
 
